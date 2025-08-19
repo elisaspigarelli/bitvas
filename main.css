@@ -1,0 +1,313 @@
+* {
+  font-family: Helvetica;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  background-color: white;
+}
+
+#root {
+  /*position: relative;*/
+  bottom: 0;
+  height: 100%;
+}
+
+.form {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  width: 96%
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  /*font-family:  Helvetica;*/
+  background: #BEE4E3;
+  color: #389693;
+  text-shadow: 2px 2px 5px rgba(67, 182, 178, 0.411);
+  box-shadow: 5px 5px 10px -1px rgba(190, 228, 227, 0.678);
+  font-weight: normal;
+}
+
+h4 {
+  text-align: center;
+  background-color: #235351;
+  color: white;
+  font-size: 20px;
+  margin: 0px;
+  padding: 10px;
+  /*border-color: #235351;*/
+}
+
+#welcome {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #83C6C4;
+}
+
+#first-row {
+  position: relative;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+
+}
+
+#second-row {
+  position: relative;
+  left: 0px;
+  width: 100%;
+  height: 42%;
+}
+
+#first-row div {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  height: 95%;
+  font-size: 18px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 10px -1px rgba(14, 31, 30, 0.678);
+}
+
+#welcome-table {
+  margin-right: 45px;
+  margin-left: 45px;
+  border: none;
+  height: 90%;
+  width: 94%;
+  table-layout: fixed;
+  font-size: 18px;
+}
+
+#welcome-table td>div {
+  margin: 5px;
+  height: 95%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 10px -1px rgba(14, 31, 30, 0.678);
+}
+
+#first-row p {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#second-row p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#first-row ul {
+  padding-left: 60px;
+  padding-right: 20px;
+}
+
+#combine_visualization {
+  background-color: white;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 570px;
+  top: 100px;
+  width: 700px;
+  height: 180px;
+}
+
+.trans {
+  float: right;
+}
+
+input,
+.form button {
+  display: inline-block;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  /* border: 2px solid #ccc;*/
+  box-shadow: 5px 5px 10px -1px rgba(190, 228, 227, 0.678);
+  border-radius: 4px;
+
+}
+.form  button {
+  width:115px;
+}
+
+input {
+  background: white;
+  color: #235351;
+  height: 18px;
+  width: 200px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #829594;
+  opacity: 1;
+  /* Firefox */
+}
+
+.form button {
+  cursor: pointer;
+  background: #83C6C4;
+  color: #235351;
+  /*border: 2px solid #ccc;*/
+  margin: 0 .5em;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #56AAA7;
+  /*color: #FFF2DA;
+   border: 2px solid #ccc;*/
+}
+
+.myCanvas {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#tip {
+  background-color: lightyellow;
+  /*border: 1px solid #ccc;*/
+  box-shadow: 5px 5px 10px -1px rgba(207, 207, 207, 0.521);
+  position: absolute;
+  left: -1000px;
+  top: 100px;
+  width: 100;
+  height: 30;
+}
+
+tabWrap,
+.tabWrap * {
+  box-sizing: border-box;
+}
+
+.tabWrap {
+  position: relative;
+  bottom: 0;
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 5px 5px 10px -1px rgba(150, 204, 202, 0.432);
+}
+
+.tabHeader {
+  overflow: hidden;
+  /* border: 1px solid #ccc;*/
+  background-color: #E5F5F4;
+}
+
+.tabHeader button {
+  background-color: inherit;
+  color: #235351;
+  display: block;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tabHeader button:hover {
+  background-color: #56AAA7;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 20px;
+  /* border: 1px solid #ccc;
+  border-top: none;*/
+}
+
+.tabcontent.open {
+  display: block;
+  padding: 0px;
+  background-color: white;
+  color: #414A4A;
+}
+
+/* Create an active/current tablink class */
+.tabHeader button.active {
+  background-color: #83C6C4;
+  color: #235351;
+}
+
+table.legend {
+  width: 100%;
+  padding: 3px 20px;
+  font-family: Arial;
+  border-spacing: 1em;
+}
+
+table.legend>tr>td {
+  text-align: center;
+  font-size: 20px;
+  width: 10%;
+}
+
+td.clicked {
+  background-color: #389693;
+  color: white;
+  border: 1px inset;
+  border-radius: 10px;
+}
+
+hr {
+  width: 80%;
+  height: 5px;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+table.blockTab {
+  width: 100%;
+  padding: 5px 20px;
+  font-family: Arial;
+  border-spacing: 1em;
+}
+
+table.blockTab>tr>td {
+  /*border: 1px solid; 
+  width: 15% ; 
+  white-space:nowrap;*/
+  font-size: 20px;
+}
+
+table.transTab {
+  width: 100%;
+  padding: 5px 20px;
+  font-family: Arial;
+  border-spacing: 1em;
+}
+
+table.transTab>tr>td {
+  /*border: 1px solid; 
+  width: 15% ; 
+  white-space:nowrap;*/
+  font-size: 20px;
+}
+
+th {
+  text-align: left;
+}

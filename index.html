@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITVAS: Bitcoin Visual Analytics System</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="root">
+        <h1 id="title"><b>BITVAS</b>: Bitcoin Visual Analytics System</h1>
+        <form class="form">
+            <input class="date" type="datetime-local" value="2021-12-01T11:42" name="date">
+            <button class="date">Timestamp</button>
+            <input class="trans" type="text" placeholder="Insert transaction or block" name="trans">
+            <button class="trans">Hash/ID</button>
+        </form>
+        <canvas id="tip"></canvas>
+        <div id="welcome">
+            <div id="first-row">
+                <div>
+                    <h4>COMBINED VISUALIZATION</h4>
+                    <p>The <u>Combined Visualization</u> shows Blocks in the <b>Timestamp</b> period chosen in the left field above.
+                    The reference period is from 12 hours before and 12 hours after this value.</p>
+                    <!--<p>The <u>Combined Visualization</u> shows Blocks in the <b>Timestamp</b> period: 12hours after and
+                        before the timestamp you choose in the left field above.</p>-->
+                    <p>It allows to focus on Timestamp for:</p>
+                    <ul>
+                        <li>Blocks analysis</li>
+                        <li>Blocks relationship (transactions information)</li>
+                        <li>General information</li>
+                    </ul>
+                    <p>Click on a <b>Miner</b> in the legend to go to <u>Miner Visualization</u><br>
+                        Click on a <b>Block</b> to go to <u>Block Visualization</u></p>
+                    <canvas id="combine_visualization"></canvas>
+                </div>
+            </div>
+            <div id="second-row">
+                <table id="welcome-table">
+                    <tr>
+                        <td>
+                            <div>
+                                <h4>MINER VISUALIZATION</h4>
+                               <p>The <u>Miner Visualization</u> lets you focus on a specific <b>Miner</b> showing only
+                                    blocks validated by him in the Timestamp period.</p>
+                                <p>Some miners are ViaBTC, Bitfury, AntPool, SlushPool, Poolin and Unknown when it's
+                                    unknown. </p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <h4>BLOCK VISUALIZATION</h4>
+                                <p>The <u>Block Visualization</u> lets you focus on a specific <b>Block</b> showing all
+                                    its relationship with other blocks.</p>
+                                <p>You can click on a Block in the <u>Combined Visualization</u> or search the hash or
+                                    block ID in the right field above.</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <h4>TRANSACTION VISUALIZATION</h4>
+                                <p>The <u>Transaction Visualization</u> lets you focus on a specific <b>Transaction</b>
+                                    showing its input and output and all its informations like the value.</p>
+                                <p>You can search the hash of the transaction in the right field above.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="myTabs" class="tabWrap">
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
