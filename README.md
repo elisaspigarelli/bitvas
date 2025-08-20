@@ -38,10 +38,11 @@ First, you need to deploy the application on an Apache Tomcat server. You can fo
 Once the application is deployed, open your browser and navigate to the deployed directory in your Tomcat server. Typically, this would be something like http://localhost:8080/bitvas, but the exact URL depends on your Tomcat configuration.
 
 ### Interaction Parameters
-Since this is a Proof of Concept, there are fixed parameters you can use to interact with the application. The available interaction parameters are:
+Since this is a Proof of Concept, there are fixed parameters you can use to interact with the application. The available interaction parameters for each analysis are:
 
-<timestamp: 01/12/2021 11:42>
-
-<hash/Transaction ID: ba11cd551c626aba0cb3c7a494981512d99d9dabb08c11168ad0c417b51d8ef9>
+- General Block Analysis: Timestamp 01/12/2021 11:42
+- Miner Block Validation: everyone available
+- Block Information Analysis: Block ID 712080
+- Transaction Analysis: Hash/Transaction ID ba11cd551c626aba0cb3c7a494981512d99d9dabb08c11168ad0c417b51d8ef9
 
 These parameters allow you to filter the data and simulate different types of queries on the Bitcoin Blockchain. 
