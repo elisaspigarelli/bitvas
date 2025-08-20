@@ -12,7 +12,7 @@ It allows analysts to conduct four main types of investigations:
 - Transaction Analysis: Investigate detailed information regarding a specific Bitcoin transaction.
 
 ## Data 
-The system uses real data from the Bitcoin Blockchain (https://gz.blockchair.com/bitcoin/blocks/) and serves as the foundation for interactive visualizations. To simulate interaction with a backend (BE) and a database that performs queries and retrieves data, the raw Bitcoin data has been aggregated and filtered through Python scripts. This preprocessing step mimics how data would typically be queried from a backend system. Once processed, the data is made available in the application as JSON files, which are stored in the dataset folder.
+The system uses real data from the [Bitcoin Blockchain](https://gz.blockchair.com/bitcoin/blocks/) and serves as the foundation for interactive visualizations. To simulate interaction with a backend (BE) and a database that performs queries and retrieves data, the raw Bitcoin data has been aggregated and filtered through Python scripts. This preprocessing step mimics how data would typically be queried from a backend system. Once processed, the data is made available in the application as JSON files, which are stored in the dataset folder.
 
 ## Technologies Used
 
