@@ -11,8 +11,6 @@ It allows analysts to conduct four main types of investigations:
 
 - Transaction Analysis: Investigate detailed information regarding a specific Bitcoin transaction.
 
-## Data 
-The system uses real data from the [Bitcoin Blockchain](https://gz.blockchair.com/bitcoin/blocks/) and serves as the foundation for interactive visualizations. To simulate interaction with a backend (BE) and a database that performs queries and retrieves data, the raw Bitcoin data has been aggregated and filtered through Python scripts. This preprocessing step mimics how data would typically be queried from a backend system. Once processed, the data is made available in the application as JSON files, which are stored in the dataset folder.
 
 ## Technologies Used
 
@@ -27,6 +25,44 @@ The application runs on Apache Tomcat as the web server for serving the frontend
 ### Data Processing:
 
 Python scripts were used to process the raw Bitcoin Blockchain data. These scripts aggregate, filter, and transform the data into a usable format, which is then stored as JSON files in the dataset folder for use in the application.
+
+## Data Processing
+The system uses real data from the [Bitcoin Blockchain](https://gz.blockchair.com/bitcoin/blocks/) and serves as the foundation for interactive visualizations. To simulate interaction with a backend (BE) and a database that performs queries and retrieves data, the raw Bitcoin data has been aggregated and filtered through Python scripts. This preprocessing step mimics how data would typically be queried from a backend system. Once processed, the data is made available in the application as JSON files, which are stored in the dataset folder.
+
+### Dataset Processing:
+This project allows you to process a selected dataset and generate JSON files that are used in the application. All the data processing scripts are located in the data-elaboration folder. The main script that runs the entire data processing pipeline is run_script.py.
+
+#### Structure
+
+- data-elaboration/: Folder containing the data processing scripts.
+
+- run_script.py: Main script that processes the dataset.
+
+- files/: Folder containing input, dataset, output folder and the processing scripts
+
+    - dataset/: Folder containing the datasets to be processed, real data from the Bitcoin Blockchain
+    - input/: Folder containing JSON file that are made from a script as input file for others scripts
+    - output/: Folder where the resulting JSON files from the data processing are saved.
+
+#### How to Use
+1) Set up the environment
+
+Make sure you have an active Python environment, preferably within a virtual environment. If you haven’t created one yet, you can do so with the following commands:
+
+```sh
+python3 -m venv venv
+source venv/bin/activate
+
+```
+2) Run the run_script.py script
+To run the data processing, execute the run_script.py script from the terminal:
+```sh
+python data-elaboration/run_script.py
+
+```
+3) Check the results
+
+Once the script has completed, you will find the resulting JSON files in the data-elaboration/files/output/ folder. These files are the same used in the application in the dataset project folder.
 
 ## Run the Application
 To run the application, follow these steps:
