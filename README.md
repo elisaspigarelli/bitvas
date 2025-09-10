@@ -36,7 +36,7 @@ This project allows you to process a selected dataset and generate JSON files th
 
 - data-elaboration/: Folder containing the data processing scripts.
 
-- run_script.py: Main script that processes the dataset.
+- run_script.py: Main script that processes all the other scripts.
 
 - files/: Folder containing input, dataset, output folder and the processing scripts
 
@@ -55,9 +55,10 @@ source venv/bin/activate
 
 ```
 2) Run the run_script.py script
+
 To run the data processing, execute the run_script.py script from the terminal:
 ```sh
-python data-elaboration/run_script.py
+python3 data-elaboration/run_script.py
 
 ```
 3) Check the results
