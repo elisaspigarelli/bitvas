@@ -1,9 +1,9 @@
 import json
 import math
 
-block_dataset = json.load(open("./input/block_dataset.json"))
-input_dataset = json.load(open("./input/input_dataset.json"))
-output_dataset= json.load(open("./input/output_dataset.json"))
+block_dataset = json.load(open("./files/input/block_dataset.json"))
+input_dataset = json.load(open("./files/input/input_dataset.json"))
+output_dataset= json.load(open("./files/input/output_dataset.json"))
 
 #################################################################
 ##                          FUNCTION                           ##
@@ -47,7 +47,7 @@ for block in block_dataset:
         number = int(block.get("reward")) / 100000000
         obj["reward"] = number
 
-json.dump(obj, open("./output/neighbourMode_blockinfo0.json", "w"))
+json.dump(obj, open("./files/output/neighbourMode_blockinfo0.json", "w"))
 
 ############################################################################
 ##   Trans neighbour data
@@ -115,7 +115,7 @@ for l in neighbour_trans:
     l["lineWidth"]= scaleBetween(l["count"], 2, 7, max, min);
 
 
-json.dump(neighbour_trans, open("./output/neighbourMode_trans0.json", "w"))
+json.dump(neighbour_trans, open("./files/output/neighbourMode_trans0.json", "w"))
 
 
 ## check con i valori presi dal dataset block - non tornano precisamente
@@ -199,6 +199,6 @@ for n in neighbour_block:
         if n.get("id")== b.get("id"):
             n["guessed_miner"]= b.get("guessed_miner")
 
-json.dump(neighbour_block, open("./output/neighbourMode_dataset0.json", "w"))
+json.dump(neighbour_block, open("./files/output/neighbourMode_dataset0.json", "w"))
 
 

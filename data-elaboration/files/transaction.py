@@ -1,9 +1,9 @@
 import json
 
-block_dataset = json.load(open("./input/block_dataset.json"))
-input_dataset = json.load(open("./input/input_dataset.json"))
-output_dataset= json.load(open("./input/output_dataset.json"))
-transaction_dataset= json.load(open("./input/transaction_dataset.json"))
+block_dataset = json.load(open("./files/input/block_dataset.json"))
+input_dataset = json.load(open("./files/input/input_dataset.json"))
+output_dataset= json.load(open("./files/input/output_dataset.json"))
+transaction_dataset= json.load(open("./files/input/transaction_dataset.json"))
 
 #################################################################
 ##                          FUNCTION                           ##
@@ -32,7 +32,6 @@ find_Block='712080';
 for trans in transaction_dataset:
     if (trans.get("block_id")==find_Block):
         trans_inBlock_output.append(trans)
-#json.dump(trans_inBlock_output, open("./output/transaction_inBlock.json", "w"))
 
 find_transaction_hash='2a68c8a5859b500675cdcbdbd09b9f7ea32e6c8532cadfbb2a7955bc6d77c4ea'
 name="TX";
@@ -53,7 +52,7 @@ for trans in transaction_dataset:
         number = int(trans.get("fee")) / 100000000
         transaction_hash["fee"] = number
 
-json.dump(transaction_hash, open("./output/transactionMode_info0.json", "w"))
+json.dump(transaction_hash, open("./files/output/transactionMode_info0.json", "w"))
 
 ## find input of transaction in input_dataset to find transactions in input
 input_trans_output=[]
@@ -211,7 +210,7 @@ for i in range(len(blocks)-1):
 
 blocks_transaction_output.append(blocks[len(blocks)-1])
 
-json.dump(blocks_transaction_output, open("./output/transactionMode_dataset0.json", "w"))
+json.dump(blocks_transaction_output, open("./files/output/transactionMode_dataset0.json", "w"))
 
 ## build second file JSON for transaction info
 transaction=[]
@@ -290,7 +289,7 @@ if (len(output_trans_output)!=len(output_transaction)):
                 obj["transaction"].append(trans);
     transaction.append(obj);
 
-json.dump(transaction, open("./output/transactionMode_trans0.json", "w"))
+json.dump(transaction, open("./files/output/transactionMode_trans0.json", "w"))
 
 
 

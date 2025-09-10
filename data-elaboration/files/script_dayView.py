@@ -2,8 +2,8 @@ import json
 import math
 import numpy as np
 
-block_dataset = json.load(open("./input/block_dataset.json"))
-input_dataset = json.load(open("./input/input_dataset.json"))
+block_dataset = json.load(open("./files/input/block_dataset.json"))
+input_dataset = json.load(open("./files/input/input_dataset.json"))
 #output_dataset= json.load(open("./input/output_dataset.json"))
 #transaction_dataset= json.load(open("./input/transaction_dataset.json"))
 
@@ -71,7 +71,7 @@ for block in block_dataset:
     obj["reward"] = number
     blocks.append(obj);
 
-json.dump(blocks, open("./output/dayBlocks.json", "w"))
+json.dump(blocks, open("./files/output/dayBlocks.json", "w"))
 
 ################################################################
 #            processing
@@ -239,9 +239,9 @@ for p in range_per :
                     #print(l)
 
     if p==0 or p==1:
-        json.dump(blocks_output, open("./output/dayBlocks_"+str(perc)+".json", "w"))
+        json.dump(blocks_output, open("./files/output/dayBlocks_"+str(perc)+".json", "w"))
     else :
-        json.dump(blocks_output, open("./output/dayBlocks_0" + str(int(p * 10)) + ".json", "w"))
+        json.dump(blocks_output, open("./files/output/dayBlocks_0" + str(int(p * 10)) + ".json", "w"))
 
 
 

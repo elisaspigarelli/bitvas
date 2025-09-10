@@ -2,7 +2,7 @@ import json
 
 # INPUT DATASET
 input_dataset=[{}]
-with open('./input/input_dataset.json', 'w') as outfile, open("./dataset/blockchair_bitcoin_inputs_20211201.tsv","r") as f:
+with open('./files/input/input_dataset.json', 'w') as outfile, open("./files/dataset/blockchain_bitcoin_inputs_20211201.tsv","r") as f:
     firstline = f.readline()
     columns = firstline.strip().split('\t')
     #columns.insert(4,'hour')
@@ -17,7 +17,7 @@ with open('./input/input_dataset.json', 'w') as outfile, open("./dataset/blockch
 ########################################
 ## BLOCK DATASET
 block_dataset=[{}]
-with open('./input/block_dataset.json', 'w') as outfile, open("./dataset/blockchair_bitcoin_blocks_20211201.tsv","r") as f:
+with open('./files/input/block_dataset.json', 'w') as outfile, open("./files/dataset/blockchain_bitcoin_blocks_20211201.tsv","r") as f:
     firstline = f.readline()
     columns = firstline.strip().split('\t')
     lines = f.readlines()[0:]
@@ -30,7 +30,7 @@ with open('./input/block_dataset.json', 'w') as outfile, open("./dataset/blockch
 ###############################
 # OUTPUT DATASET
 output_dataset=[{}]
-with open('./input/output_dataset.json', 'w') as outfile, open("./dataset/blockchair_bitcoin_outputs_20211201.tsv","r") as f:
+with open('./files/input/output_dataset.json', 'w') as outfile, open("./files/dataset/blockchain_bitcoin_outputs_20211201.tsv","r") as f:
     firstline = f.readline()
     columns = firstline.strip().split('\t')
     lines = f.readlines()[0:]
@@ -43,7 +43,7 @@ with open('./input/output_dataset.json', 'w') as outfile, open("./dataset/blockc
 ######################
 # TRANSACTION DATASET
 transaction_dataset=[{}]
-with open('./input/transaction_dataset.json', 'w') as outfile, open("./dataset/blockchair_bitcoin_transactions_20211201.tsv","r") as f:
+with open('./files/input/transaction_dataset.json', 'w') as outfile, open("./files/dataset/blockchain_bitcoin_transactions_20211201.tsv","r") as f:
     firstline = f.readline()
     columns = firstline.strip().split('\t')
     lines = f.readlines()[0:]

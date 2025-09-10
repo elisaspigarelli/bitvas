@@ -1,8 +1,8 @@
 import json
 import math
 
-block_dataset = json.load(open("./input/block_dataset.json"))
-input_dataset = json.load(open("./input/input_dataset.json"))
+block_dataset = json.load(open("./files/input/block_dataset.json"))
+input_dataset = json.load(open("./files/input/input_dataset.json"))
 
 #################################################################
 ##                          FUNCTIONS                          ##
@@ -184,7 +184,7 @@ for find_miner in miners_name:
             obj["type"] = 0
             miner_output.append(obj)
 
-        json.dump(miner_output, open("./output/miner_blocks_"+find_miner+".json", "w"))
+        json.dump(miner_output, open("./files/output/miner_blocks_"+find_miner+".json", "w"))
     else:
-        with open("./output/miner_blocks_"+find_miner+".json", 'x') as file:
+        with open("./files/output/miner_blocks_"+find_miner+".json", 'x') as file:
             pass
