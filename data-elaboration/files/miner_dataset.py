@@ -84,8 +84,6 @@ for find_miner in miners_name:
             blocks_miner.append(obj);
 
 
-    print("ELISA LEN")
-    print(len(blocks_miner));
     ############################################################################
     ##   TRANSAZIONI
     ############################################################################
