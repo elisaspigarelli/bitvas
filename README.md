@@ -7,6 +7,7 @@ Bitvas is a visual analytics web app developed for a master thesis project to ex
 - [Technologies Used](#technologies-used)
 - [Data Processing](#data-processing)
 - [Run the Application](#run-the-application)
+- [Recognitions](#recognitions)
 
 ## Project Overview
 Bitvas - Bitcoin Visual Analytics System is a "Proof of Concept" system developed for the visual analysis of Bitcoin transactions. The system provides a powerful and interactive web-based application to analyze key components of the Bitcoin Blockchain. 
@@ -88,3 +89,8 @@ Since this is a Proof of Concept, there are fixed parameters you can use to inte
 - Transaction Analysis: Hash/Transaction ID ba11cd551c626aba0cb3c7a494981512d99d9dabb08c11168ad0c417b51d8ef9
 
 These parameters allow you to filter the data and simulate different types of queries on the Bitcoin Blockchain. 
+
+## Recognitions
+Third position on ["Pegaso 2000" graduation award for the best thesis on topics related to "Computer Engineering and Digital
+Technologies"](https://www.unipg.it/ateneo/concorsi/borse-premi-ed-altri-incentivi?layout=concorso&idConcorso=34041)
+![premioPegaso2000_page-0001](https://github.com/user-attachments/assets/f24345a5-7ef9-4ce0-b86b-c0ca80d32a16)
