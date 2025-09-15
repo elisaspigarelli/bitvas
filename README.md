@@ -1,16 +1,19 @@
-# Project Overview
+# BITVAS - Bitcoin Visual Analytics System
 
-Bitvas (Bitcoin Visual Analytics System) is a "Proof of Concept" system developed for the visual analysis of Bitcoin transactions. The system provides a powerful and interactive web-based application to analyze key components of the Bitcoin Blockchain. 
+## Table of Contents
+- [Project Overview](#prject-overview)
+- [Technologies Used](#technologies-used)
+- [Data Processing](#data-processing)
+- [Run the Application](#run-the-application)
+
+## Project Overview
+Bitvas - Bitcoin Visual Analytics System is a "Proof of Concept" system developed for the visual analysis of Bitcoin transactions. The system provides a powerful and interactive web-based application to analyze key components of the Bitcoin Blockchain. 
 It allows analysts to conduct four main types of investigations:
 
 - General Block Analysis: Analyze blocks within a defined time range by selecting a specific timestamp.
-
 - Miner Block Validation: Analyze blocks validated by a specific miner.
-
 - Block Information Analysis: View and analyze information about a specific block.
-
 - Transaction Analysis: Investigate detailed information regarding a specific Bitcoin transaction.
-
 
 ## Technologies Used
 
